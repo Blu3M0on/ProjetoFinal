@@ -1,0 +1,1339 @@
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(180deg, #B9A69F 10%, hsl(14, 25%, 79%) 79%, #f0ebea 98.31%);
+}
+
+
+
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1d1d1d;
+  color: #B9A69F;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.cookie-banner a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  z-index: 99;
+  transition: background-color 0.8s ease-in-out;
+
+
+}
+
+#header.scrolled {
+  background-color: #4D362D;
+
+}
+
+#header.scrolled ul li:last-child {
+  background-color: #D7C3BD;
+  margin-top: -10px;
+  margin-right: -20px;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+#header.scrolled ul li:nth-child(3) {
+  margin-top: 20px;
+
+}
+
+
+#header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-top: 35px;
+}
+
+#header ul li {
+  text-align: center;
+}
+
+#header-image.scrolled {
+  max-width: 100%;
+  height: 45px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 20px;
+  margin: auto;
+
+}
+
+
+#header a:link,
+#header a:visited,
+#header a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+/* for phones*/
+
+.phone-nav {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+}
+
+.phone-nav .navbar-brand {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  margin-left: 3em;
+}
+
+.phone-nav .navbar-brand div:last-child {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.navbar-brand img {
+  margin-top: 0;
+  height: 60px;
+}
+
+
+
+
+
+.dropdown-menu {
+  display: block;
+  background-color: #B9A69F;
+  z-index: 10;
+}
+
+.pag1 {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.center-image,
+.center-image-text h1 {
+  position: sticky;
+  opacity: 0;
+  animation: fade-in 2s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.center-image-text {
+  display: block;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Allison';
+  font-size: 50px;
+}
+
+.center-image-text h1,
+.center-image-text img {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 600;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.more-info {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Allison';
+  font-size: 30px;
+
+}
+
+.more-info img {
+  width: 30px;
+}
+
+/* 2ª pagina, acerca do restaurante*/
+
+#restaurante {
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100%;
+  color: aliceblue;
+  text-align: center;
+}
+
+#restaurante .background {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 100vh;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#restaurante .text-wrapper {
+  margin-top: 100vh;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  opacity: 0;
+  animation: slide-in-anim 2s ease-out forwards;
+}
+
+@keyframes slide-in-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+
+.text-wrapper h1 {
+  font-size: 80px;
+}
+
+
+.text-wrapper p {
+  font-size: 30px
+}
+
+
+/* 3ª pagina, menus*/
+
+
+
+.menus {
+  display: flex;
+  max-width: 100%;
+}
+
+.main-menu {
+  width: 55vw;
+  padding-right: 100px;
+
+}
+
+#menu h1 {
+  padding-top: 150px;
+  text-align: center;
+  font-weight: 800;
+}
+
+
+.main-menu h4 {
+  font-family: "Playfair Display";
+  font-size: 2em;
+  margin-left: 20vw;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  margin-left: 25vw;
+  margin-top: 0;
+}
+
+.main-menu .price-list-header {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.main-menu .item {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.main-menu .item-price {
+  align-items: end;
+}
+
+
+.main-menu p {
+  margin-left: 30px;
+  font-size: 12px;
+}
+
+#menu .menu-takeaway {
+  margin-top: 100px;
+  margin-left: 200px;
+  width: 25%;
+  height: 450px;
+  background: linear-gradient(180deg, rgba(119, 92, 82, 0.98) 0%, rgba(159, 142, 136, 0.00) 100%);
+  text-align: center;
+}
+
+.menu-takeaway h5 {
+  margin-top: 50px;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.price-wrapper {
+  float: right;
+  margin-right: 40px;
+  margin-top: -25px;
+  width: 50px;
+  height: 25px;
+  border-radius: 11px;
+  background-color: rgba(186, 97, 97, 0.71);
+}
+
+.price-takeaway {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.info-takeaway span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.info-takeaway .takeaway-title {
+  font-family: "Playfair Display";
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 40px;
+
+}
+
+.info-takeaway .takeaway-item {
+  font-size: 16px;
+}
+
+
+/* 4ª pagina, especialidades*/
+
+
+.especialidades-wrapper {
+  margin-top: 50px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+#especialidades h1 {
+  padding-top: 150px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.especialidades-wrapper p {
+  text-align: center;
+  font-weight: 600;
+  color: #1D1E18;
+  text-shadow: #1D1E18;
+  font-size: 22px;
+  opacity: 0;
+  animation: fade-in 2s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.carousel {
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 600px;
+}
+
+/*5ª pagina, menu para grupos*/
+
+#menugrupos {
+  height: 100vh;
+  margin-top: 100px;
+  max-height: 100vh;
+  max-width: 100%;
+}
+
+#menugrupos .phone-background {
+  display: none;
+  opacity: 0.6;
+  position: absolute;
+  z-index: -1;
+}
+
+#menugrupos .background {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: -1;
+}
+
+#menugrupos h1 {
+  padding-top: 150px;
+  font-weight: 800;
+  text-align: center;
+}
+
+#menugrupos .more-info-grupo {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+  color: #fff;
+}
+
+.menu-grupos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu-grupos .menu1,
+.menu2 {
+  width: 25%;
+}
+
+.menu-grupos h4 {
+  margin-top: 20px;
+  text-align: center;
+  color: #eee;
+}
+
+.collapsible {
+  background-color: #AD8D81;
+  color: #1D1E18;
+  cursor: pointer;
+  width: 100%;
+  padding-right: 500px;
+  margin-top: 25px;
+  border: none;
+  font-style: italic;
+  font-weight: 700;
+  padding: 18px;
+  font-size: 20px;
+}
+
+.collapsible:focus {
+  outline: none;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #B9A69F;
+}
+
+.content {
+  padding: 0 18px;
+  width: 100%;
+  background-color: #E8DEDB;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.menu1 h4,
+.menu2 h4 {
+  margin: 0;
+}
+
+.content p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+}
+
+.menu-grupos .group-price {
+  display: block;
+  font-weight: 800;
+  margin-top: 5px;
+  color: #000;
+  text-align: center;
+}
+
+#menugrupos .book-here {
+  position: absolute;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Playfair Display";
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#menugrupos .book-here-button {
+  background-color: #AD8D81;
+  padding: 10px;
+  color: #1D1E18;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 4px 5px 10px rgba(0, 0, 0, 2);
+}
+
+
+/*6ª pagina, reservas*/
+
+#reserva {
+  height: 100vh;
+}
+
+#reserva h1 {
+  padding-top: 150px;
+  font-weight: 800;
+  text-align: center;
+}
+
+#reserva .contacts {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+#reserva button {
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #AD8D81;
+  cursor: pointer;
+}
+
+.phone div,
+.email div,
+.links div {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  padding-left: 80px;
+}
+
+
+.links a:last-child {
+  filter: invert(100%);
+}
+
+.contacts a,
+.contacts a:hover {
+  font-family: "PlayFair Display";
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/*formulário e mapa */
+.form-mapa {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px;
+}
+
+.form-container,
+.map-container {
+  width: 10vw;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container h4 {
+  margin-top: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.form-container form {
+  border: #000 ridge;
+  border-radius: 20px;
+  padding: 20px 60px;
+  margin: 20px;
+}
+
+.form-container input {
+  height: 40px;
+  width: 500px;
+  display: block;
+  margin: 20px;
+  border: solid #AD8D81;
+  border-radius: 10px;
+  padding-left: 10px;
+  background: scroll;
+  outline: none;
+}
+
+.form-container input::placeholder {
+  color: #000;
+}
+
+.form-container input#mensagem {
+  height: 150px;
+}
+
+.form-container button {
+  margin-bottom: 5px;
+}
+
+.map-container h4 {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+#map {
+  position: absolute;
+  height: 30em;
+  width: 30%;
+  border: #000 ridge;
+  border-radius: 20px;
+  padding: 20px 60px;
+  margin-top: 4.7em;
+}
+
+
+/* botão back to top */
+
+.hidden {
+  display: none;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  background: #fff;
+  padding: 0.3rem;
+  border: none;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  background-color: #AD8D81;
+}
+
+
+/*footer*/
+footer {
+  height: auto;
+  background-color: #1d1d1d;
+  color: #B9A69F;
+  border-top: #AD8D81 ridge;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+footer img {
+  filter: invert(100%);
+  height: 35px;
+  margin-right: 10px;
+}
+
+.footer-title {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer-item {
+  margin-top: 60px;
+}
+
+.schedule,
+.useful-links,
+.socials {
+  text-align: center;
+}
+
+.schedule img,
+.useful-links img,
+.socials img {
+  height: 25px;
+  margin: 0;
+}
+
+.useful-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.socials .facebook-link a,
+.insta-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  justify-content: space-evenly;
+}
+
+.socials p {
+  margin-top: 15px;
+}
+
+.footer-title {
+  margin-bottom: 0;
+}
+
+
+
+/*phones*/
+@media screen and (max-width: 767px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .pag1 {
+    display: none;
+  }
+
+  #header {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+    max-width: 100%;
+    background-color: #4D362D;
+    z-index: 20;
+  }
+
+
+
+  #restaurante .background {
+    display: none;
+  }
+
+  #restaurante .text-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 80%;
+  }
+
+  #restaurante .text-wrapper h1 {
+    color: #000;
+    margin-bottom: 30px;
+    margin-top: -50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  #restaurante .text-wrapper p {
+    font-size: 14px;
+    color: #000;
+    text-align: justify;
+  }
+
+
+  #menu {
+    margin-top: -500px;
+  }
+
+  #menu .menus {
+    display: block;
+  }
+
+  .main-menu h4 {
+    font-size: 20px;
+    width: max-content;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-style: italic;
+    background-color: #AD8D81;
+  }
+
+
+  .price-list-header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-menu p {
+    width: 100vw;
+    margin-left: 10px;
+  }
+
+  .main-menu ul {
+    margin-left: 0;
+  }
+
+
+
+  .main-menu .item-price {
+    margin-right: 50px;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  .main-menu .item {
+    font-size: 14px;
+  }
+
+
+  #menu .menu-takeaway {
+    margin-left: 15%;
+    width: 70%;
+    height: 200%;
+
+  }
+
+
+
+  .menu-takeaway .price-wrapper {
+    margin-right: 5px;
+    width: 40px;
+    height: 25px;
+  }
+
+  .menu-takeaway .takeaway-title,
+  .menu-takeaway .takeaway-item {
+    font-size: 14px;
+  }
+
+
+
+
+  .especialidades-wrapper p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .carousel {
+    top: 30px;
+    transform: translate(0, 0);
+    left: 50px;
+    max-width: 300px;
+  }
+
+  #menugrupos .background {
+    display: none;
+  }
+
+  #menugrupos .phone-background {
+    width: 100%;
+    display: block;
+    opacity: 0.6;
+    height: 800px;
+  }
+
+
+
+  #menugrupos .more-info-grupo {
+    margin-top: 0;
+    font-size: 10px;
+  }
+
+  .menu-grupos .menu1,
+  .menu2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .collapsible {
+    font-size: 14px;
+    margin-top: 10px;
+    width: 180px;
+  }
+
+  .content p {
+    margin-top: 20px;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+  }
+
+  .menu-grupos .group-price {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+    width: 100px;
+    margin-left: 40px;
+    color: #000;
+    text-align: center;
+    background-color: #D7C3BD;
+    border-radius: 100%;
+    opacity: 0.8;
+  }
+
+  .group-price img {
+    height: 20px;
+  }
+
+  .menu-grupos .group-price:hover {
+    opacity: 1;
+  }
+
+  #menugrupos .book-here {
+    margin-top: 40px;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+
+
+  #reserva .contacts {
+    display: block;
+  }
+
+  .phone div,
+  .email div,
+  .links div {
+    padding-left: 0px;
+  }
+
+  #reserva .contacts a {
+    font-size: 18px;
+  }
+
+  .form-mapa {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .form-mapa h4 {
+    font-size: 20px;
+    width: 200px;
+    padding: 0;
+  }
+
+  .form-container {
+    margin-left: 45%;
+  }
+
+
+  .form-container form {
+    padding: 0;
+  }
+
+  .form-container input {
+    max-width: 300px;
+  }
+
+  .map-container {
+    position: relative;
+    height: 300px;
+    margin-left: 45%;
+  }
+
+  #map {
+    width: 900%;
+  }
+
+  .back-to-top {
+    z-index: 10;
+  }
+
+  footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 800px;
+  }
+
+  .footer-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+  }
+
+  .footer-title img {
+    margin: 0;
+    height: 30px;
+  }
+
+  .facebook-link,
+  .insta-link {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .facebook-link img,
+  .insta-link img {
+    height: 15px;
+    padding-right: 10px;
+  }
+
+
+}
+
+/*tablets*/
+@media screen and (min-width:768px) and (max-width: 991px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+  }
+
+
+  #header {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+    max-width: 100%;
+    background-color: #4D362D;
+    z-index: 20;
+  }
+
+  #restaurante .background {
+    height: max-content;
+  }
+
+  #restaurante .text-wrapper h1 {
+    color: #D7C3BD;
+    margin-top: -100px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  #restaurante .text-wrapper p {
+    font-size: 14px;
+    color: #D7C3BD;
+    text-align: justify;
+  }
+
+
+  #menu {
+    margin-top: -300px;
+  }
+
+  #menu .menus {
+    display: block;
+  }
+
+
+
+  .main-menu h4 {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-style: italic;
+    background-color: #AD8D81;
+  }
+
+  .price-list-header {
+
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .main-menu p {
+    width: 100vw;
+    margin-left: 10px;
+  }
+
+  .main-menu ul {
+    margin-left: 0;
+  }
+
+
+  .main-menu .item-price {
+    margin-right: 20%;
+
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  .main-menu .item {
+    font-size: 14px;
+  }
+
+
+  #menu .menu-takeaway {
+    width: 50%;
+    height: 200%;
+  }
+
+  .menu-takeaway .price-wrapper {
+    margin-right: 5px;
+    width: 40px;
+    height: 25px;
+  }
+
+  .menu-takeaway .takeaway-title,
+  .menu-takeaway .takeaway-item {
+    font-size: 14px;
+  }
+
+  .especialidades-wrapper p {
+    font-size: 14px;
+  }
+
+  .carousel {
+    top: 30px;
+    transform: translate(0, 0);
+    left: 15%;
+    max-width: 600px;
+  }
+
+  #menugrupos .more-info-grupo {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  #menugrupos h4 {
+    margin-left: 50%;
+  }
+
+  .collapsible {
+    font-size: 16px;
+    margin-top: 10px;
+    width: 300px;
+    padding: auto;
+  }
+
+
+  .content {
+    width: 300px;
+    padding: 0;
+  }
+
+  .content p {
+    margin-top: 20px;
+    text-align: center;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+  }
+
+  .menu-grupos .group-price {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+    width: 100px;
+    margin-left: 25%;
+    color: #000;
+    text-align: center;
+    background-color: #D7C3BD;
+    border-radius: 100%;
+    opacity: 0.8;
+  }
+
+  .group-price img {
+    height: 22px;
+  }
+
+  .menu-grupos .group-price:hover {
+    opacity: 1;
+  }
+
+  #menugrupos .book-here {
+    margin-top: 40px;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+
+  #reserva .contacts {
+    display: block;
+  }
+
+  .phone div,
+  .email div,
+  .links div {
+    padding-left: 0px;
+  }
+
+  .form-mapa {
+    display: block;
+    flex-direction: column;
+  }
+
+
+  .form-mapa h4 {
+    font-size: 20px;
+    width: 200px;
+    padding: 0;
+  }
+
+  .form-container {
+    margin-left: 45%;
+  }
+
+
+  .form-container form {
+    padding: 60px;
+  }
+
+  .form-container input {
+    max-width: 900px;
+  }
+
+  .map-container {
+    position: relative;
+    height: 300px;
+    margin-left: 45%;
+  }
+
+  #map {
+    position: absolute;
+    width: 900%;
+  }
+
+  .footer {
+    margin-top: 1000px;
+    width: 100%;
+  }
+
+}
+
+/*larger tablets and desktop*/
+@media screen and (min-width:992px) {
+
+
+  #menu .menu-takeaway {
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 40%;
+    height: 450px;
+    background: linear-gradient(180deg, rgba(119, 92, 82, 0.98) 0%, rgba(159, 142, 136, 0.00) 100%);
+    text-align: center;
+  }
+
+
+
+  .form-mapa {
+    display: block;
+    flex-direction: column;
+  }
+
+
+  .form-mapa h4 {
+    font-size: 20px;
+    width: 200px;
+    padding: 0;
+  }
+
+  .form-container {
+    margin-left: 45%;
+  }
+
+
+  .form-container form {
+    padding: 60px;
+  }
+
+  .form-container input {
+    max-width: 900px;
+  }
+
+  .map-container {
+    position: relative;
+    height: 300px;
+
+    margin-left: 45%;
+  }
+
+  #map {
+    position: absolute;
+    width: 900%;
+  }
+
+  .footer {
+    margin-top: 1000px;
+  }
+
+}

@@ -1,0 +1,255 @@
+body {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(180deg, #B9A69F 31.25%, hsl(14, 25%, 79%) 71.35%, #f0ebea 98.31%) no-repeat;
+
+}
+
+
+
+#header {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  z-index: 99;
+  transition: all 0.5s ease-in-out;
+  background-color: #4D362D;
+
+}
+
+
+#header ul li:last-child {
+  background-color: #D7C3BD;
+  margin-top: -10px;
+  margin-right: -20px;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+
+
+
+#header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-top: 35px;
+}
+
+#header ul li {
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+#header a:link,
+#header a:visited,
+#header a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+/* for phones*/
+.phone-nav {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #4D362D;
+
+}
+
+.phone-nav .navbar-brand {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  margin-left: 3em;
+  font-weight: 700;
+
+}
+
+.phone-nav .navbar-brand div:last-child {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+
+.navbar-brand img {
+  margin-top: 0;
+  height: 60px;
+}
+
+.dropdown-menu {
+  display: block;
+  background-color: #B9A69F;
+}
+
+
+
+.title h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 150px;
+}
+
+.title p {
+  text-align: center;
+  font-size: 12px;
+}
+
+.text-wrapper {
+  margin: 1em 10em;
+  text-align: justify;
+}
+
+.text-wrapper h2 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Playfair Display";
+}
+
+.text-wrapper p {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+footer {
+  height: auto;
+  background-color: #1d1d1d;
+  color: #B9A69F;
+  border-top: #AD8D81 ridge;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+
+}
+
+footer img {
+  filter: invert(100%);
+  height: 35px;
+  margin-right: 10px;
+}
+
+.footer-title {
+  display: flex;
+  margin-bottom: 30px;
+
+}
+
+.footer-item {
+  margin-top: 60px;
+}
+
+
+.schedule,
+.useful-links,
+.socials {
+  text-align: center;
+}
+
+.schedule img,
+.useful-links img,
+.socials img {
+  height: 25px;
+  margin: 0;
+}
+
+
+.useful-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.socials .facebook-link a,
+.insta-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  justify-content: space-evenly;
+}
+
+.socials p {
+  margin-top: 15px;
+}
+
+
+
+
+/*phones*/
+@media (max-width: 767px) {
+
+  #header {
+    display: none;
+  }
+
+  /* Show the phone navbar */
+  .phone-nav {
+    display: block;
+
+  }
+
+
+  .text-wrapper {
+    margin: 1em 2em;
+    text-align: justify;
+  }
+
+  .text-wrapper p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+
+
+
+  .footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+
+  .footer-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+  }
+
+  .footer-title img {
+    margin: 0;
+    height: 30px;
+  }
+
+  .facebook-link,
+  .insta-link {
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+  .facebook-link img,
+  .insta-link img {
+    height: 15px;
+    padding-right: 10px;
+  }
+
+
+
+}
